@@ -1,5 +1,7 @@
 from datetime import datetime
 
+#added bugs mjbradfo
+
 #creating a string variable to store a string value for the date and time 
 String date_str = new String("2022-03-17 10:45:30") 
 
