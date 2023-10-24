@@ -3,13 +3,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class remove_duplicates {
-
+    // method removeDuplicates returns an ArrayList with duplicates removed
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
+        // Create ArrayList to store unique elements of arr
         List<Integer> uniqueArr = new ArrayList<>();
+        // Loop through all elements in arr
         for (int i = 0; i < arr.size(); i++) {
+            // If unique vector does not yet contain element from arr at index i, add element to uniqueArr
             if (!uniqueArr.contains(arr.get(i))) {
                 uniqueArr.add(arr.get(i));
-            } else {
+            } else {    // Add the element to removedElements if it is already in uniqueArr
                 removedElements.add(arr.get(i));
             }
         }
