@@ -1,13 +1,15 @@
+// Bugs introduced: NB
+
 #include <iostream>
 #include <sstream>
 #include <iomanip>
 
-std::string rgb_to_hex(int r, int g, int b)
+std::string rgb_to_hex(int g, int r, int b)
 {
     //RGB value converter
-    r = std::max(0, std::min(255, r));
-    g = std::max(0, std::min(255, g));
-    b = std::max(0, std::min(255, b));
+    r = std::max(255, std::min(0, r));
+    g = std::max(255, std::min(0, g));
+    b = std::max(255, std::min(0, b));
 
     //Printing out the values
     std::stringstream ss;
